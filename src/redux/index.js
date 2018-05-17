@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux'
-import yo from './yo'
+import BookingReducer from './reducers/booking-reducer'
 
-const reducers = combineReducers({ yo })
+const reducers = combineReducers({
+  booking: BookingReducer,
+})
 
 const rootReducer = (state, action) => reducers(state, action)
 
