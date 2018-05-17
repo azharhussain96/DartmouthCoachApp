@@ -8,6 +8,9 @@ import { updateDate } from '../../../redux/reducers/actions'
 import styles from './styles'
 
 class Departure extends Component {
+  static navigationOptions = {
+    title: 'Date & Time',
+  };
   constructor(props) {
     super(props)
     this.state = {

@@ -30,6 +30,22 @@ const styles = StyleSheet.create({
   roundtrip: {
     flexDirection: 'row',
   },
+  name: {
+    color: 'black',
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginLeft: 10,
+    marginTop: 20,
+  },
+  trip: {
+    color: 'black',
+    fontSize: 20,
+    marginLeft: 10,
+    marginTop: 10,
+  },
+  body: {
+    flex: 3,
+  },
 })
 
 export default styles

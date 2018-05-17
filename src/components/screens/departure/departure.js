@@ -5,6 +5,9 @@ import { updateDeparture } from '../../../redux/reducers/actions'
 import styles from './styles'
 
 class Departure extends Component {
+  static navigationOptions = {
+    title: 'Departure',
+  };
   constructor(props) {
     super(props)
     this.state = {
@@ -73,7 +76,7 @@ class Departure extends Component {
     if (this.state.clicked) {
       NextButton = (
         <View>
-          <Text> From: {this.props.booking.departure} </Text>
+          <Text style={styles.name}> From: {this.props.booking.departure} </Text>
           <TouchableOpacity style={styles.next} onPress={() => { this.props.navigation.navigate('To') }}>
             <Text> Next </Text>
           </TouchableOpacity>

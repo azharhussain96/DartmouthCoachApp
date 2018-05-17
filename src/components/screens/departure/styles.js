@@ -134,6 +134,13 @@ const styles = StyleSheet.create({
     width: 410,
     height: 100,
   },
+  name: {
+    color: 'black',
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginLeft: 10,
+    marginTop: 20,
+  },
 })
 
 export default styles
