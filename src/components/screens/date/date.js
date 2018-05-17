@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { View, Text, TouchableOpacity } from 'react-native'
+import { Image, View, Text, TouchableOpacity } from 'react-native'
 import CalendarPicker from 'react-native-calendar-picker'
 import { Dropdown } from 'react-native-material-dropdown'
 
@@ -95,6 +95,12 @@ class Departure extends Component {
     if (this.state.selectedEndDate === null) {
       return (
         <View style={styles.container}>
+          <View>
+            <Image
+              style={styles.nav}
+              source={require('../../../../assets/dateNav.png')}
+            />
+          </View>
           <CalendarPicker
             startFromMonday
             onDateChange={this.onDateChange}
@@ -112,15 +118,26 @@ class Departure extends Component {
           <Dropdown
             label="Departure Time"
             data={data}
-            onChangeText={(value, index, dat) => { this.setState({ departTime: value }) }}
+            onChangeText={(value, index, dat) => {
+              this.setState({ departTime: value })
+              console.log(dat)
+            }}
           />
           <View />
-          {NextButton}
+          <View style={{ alignItems: 'center' }}>
+            {NextButton}
+          </View>
         </View>
       )
     }
     return (
       <View style={styles.container}>
+        <View>
+          <Image
+            style={styles.nav}
+            source={require('../../../../assets/dateNav.png')}
+          />
+        </View>
         <CalendarPicker
           startFromMonday
           onDateChange={this.onDateChange}
@@ -146,7 +163,9 @@ class Departure extends Component {
           onChangeText={(value) => { this.setState({ returnTime: value }) }}
         />
         <View />
-        {NextButton}
+        <View style={{ alignItems: 'center' }}>
+          {NextButton}
+        </View>
       </View>
     )
   }

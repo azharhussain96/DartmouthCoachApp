@@ -18,10 +18,11 @@ const Home = props => (
     resizeMode="stretch"
     blurRadius={5}
   >
-    <View>
-      <Text>Azhar Hussain</Text>
-      <Text>0 Upcoming Trips</Text>
+    <View style={styles.header}>
+      <Text style={styles.name}>Azhar Hussain</Text>
+      <Text style={styles.trip}>0 Upcoming Trips</Text>
     </View>
+    <View style={styles.body} />
     <View style={styles.drawer}>
       <Button onPress={() => { props.navigation.navigate('From') }} title="Book Trip" />
       <Button onPress={() => { props.navigation.navigate('Retrieve') }} title="Find Booking" />

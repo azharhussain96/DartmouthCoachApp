@@ -30,6 +30,10 @@ const styles = StyleSheet.create({
   roundtrip: {
     flexDirection: 'row',
   },
+  nav: {
+    width: 410,
+    height: 100,
+  },
 })
 
 export default styles

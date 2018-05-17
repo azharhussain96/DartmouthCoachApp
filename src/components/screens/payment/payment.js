@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { View, TouchableOpacity, Text, TextInput } from 'react-native'
+import { Image, View, TouchableOpacity, Text, TextInput } from 'react-native'
 import RadioForm from 'react-native-simple-radio-button'
 
 
@@ -55,20 +55,20 @@ class Payment extends Component {
         <View>
           <TextInput
             placeholder="Name on Card"
-            style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+            style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginTop: 10 }}
             onChangeText={text => this.setState({ name: text })}
             value={this.state.name}
           />
           <TextInput
             placeholder="Credit Card Number"
-            style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+            style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginTop: 10 }}
             onChangeText={text => this.setState({ number: text })}
             keyboardType={'numeric'}
             value={this.state.number}
           />
           <TextInput
             placeholder="Expiration Date: MM/YY"
-            style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+            style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginTop: 10 }}
             onChangeText={text => this.setState({ exp: text })}
             keyboardType={'numeric'}
             value={this.state.exp}
@@ -79,13 +79,21 @@ class Payment extends Component {
 
     return (
       <View>
+        <View>
+          <Image
+            style={styles.nav}
+            source={require('../../../../assets/payNav.png')}
+          />
+        </View>
         <RadioForm
           radio_props={radio_props}
           initial={0}
           onPress={(value) => { this.setState({ value }) }}
         />
         {enterCredit}
-        {NextButton}
+        <View style={{ alignItems: 'center' }}>
+          {NextButton}
+        </View>
       </View>
     )
   }

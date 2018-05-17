@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { View, Text, ImageBackground, TouchableOpacity } from 'react-native'
+import { Image, View, Text, ImageBackground, TouchableOpacity } from 'react-native'
 import { updateDestination } from '../../../redux/reducers/actions'
 import styles from './styles'
 
@@ -95,13 +95,19 @@ class Departure extends Component {
       if (this.props.booking.departure === 'New York') {
         return (
           <View style={styles.container}>
+            <View>
+              <Image
+                style={styles.nav}
+                source={require('../../../../assets/toNav.png')}
+              />
+            </View>
             <View style={styles.map}>
               <ImageBackground
                 style={styles.image}
                 source={require('../../../../assets/generalMap.png')}
               >
                 <TouchableOpacity style={styles.hanoverCircle} onPress={this.onHanoverClick}>
-                  <Text> Hanover Upper Valley </Text>
+                  <Text style={{ color: 'white', fontWeight: 'bold' }}> Hanover Upper Valley </Text>
                 </TouchableOpacity>
               </ImageBackground>
             </View>
@@ -113,16 +119,22 @@ class Departure extends Component {
         this.props.booking.departure === 'Lebanon') {
         return (
           <View style={styles.container}>
+            <View>
+              <Image
+                style={styles.nav}
+                source={require('../../../../assets/toNav.png')}
+              />
+            </View>
             <View style={styles.map}>
               <ImageBackground
                 style={styles.image}
                 source={require('../../../../assets/generalMap.png')}
               >
                 <TouchableOpacity style={styles.bostonCircle} onPress={this.onBostonClick}>
-                  <Text> Boston </Text>
+                  <Text style={{ color: 'white', fontWeight: 'bold' }}> Boston </Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.nyCircle} onPress={this.onNyClick}>
-                  <Text> New York </Text>
+                  <Text style={{ color: 'white', fontWeight: 'bold' }}> New York </Text>
                 </TouchableOpacity>
               </ImageBackground>
             </View>
@@ -132,13 +144,19 @@ class Departure extends Component {
       }
       return (
         <View style={styles.container}>
+          <View>
+            <Image
+              style={styles.nav}
+              source={require('../../../../assets/toNav.png')}
+            />
+          </View>
           <View style={styles.map}>
             <ImageBackground
               style={styles.image}
               source={require('../../../../assets/generalMap.png')}
             >
               <TouchableOpacity style={styles.hanoverCircle} onPress={this.onHanoverClick}>
-                <Text> Hanover Upper Valley </Text>
+                <Text style={{ color: 'white', fontWeight: 'bold' }}> Hanover Upper Valley </Text>
               </TouchableOpacity>
             </ImageBackground>
           </View>
@@ -149,6 +167,12 @@ class Departure extends Component {
       if (this.props.booking.departure === 'New York') {
         return (
           <View style={styles.container}>
+            <View>
+              <Image
+                style={styles.nav}
+                source={require('../../../../assets/toNav.png')}
+              />
+            </View>
             <View style={styles.map}>
               <ImageBackground
                 style={styles.image}
@@ -158,7 +182,7 @@ class Departure extends Component {
                   style={styles.hanoverBigCircle}
                   onPress={this.onHanoverChoiceClick}
                 >
-                  <Text> Hanover </Text>
+                  <Text style={{ color: 'white', fontWeight: 'bold' }}> Hanover </Text>
                 </TouchableOpacity>
               </ImageBackground>
             </View>
@@ -168,19 +192,25 @@ class Departure extends Component {
       }
       return (
         <View style={styles.container}>
+          <View>
+            <Image
+              style={styles.nav}
+              source={require('../../../../assets/toNav.png')}
+            />
+          </View>
           <View style={styles.map}>
             <ImageBackground
               style={styles.image}
               source={require('../../../../assets/hanover.png')}
             >
               <TouchableOpacity style={styles.hanoverBigCircle} onPress={this.onHanoverChoiceClick}>
-                <Text> Hanover </Text>
+                <Text style={{ color: 'white', fontWeight: 'bold' }}> Hanover </Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.lebanonCircle} onPress={this.onLebClick}>
-                <Text> Lebanon </Text>
+                <Text style={{ color: 'white', fontWeight: 'bold' }}> Lebanon </Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.londonCircle} onPress={this.onLondonClick}>
-                <Text> New London </Text>
+                <Text style={{ color: 'white', fontWeight: 'bold' }}> New London </Text>
               </TouchableOpacity>
             </ImageBackground>
           </View>
@@ -190,6 +220,12 @@ class Departure extends Component {
     }
     return (
       <View style={styles.container}>
+        <View>
+          <Image
+            style={styles.nav}
+            source={require('../../../../assets/toNav.png')}
+          />
+        </View>
         <View style={styles.map}>
           <ImageBackground
             style={styles.image}
